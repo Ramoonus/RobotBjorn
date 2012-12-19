@@ -53,4 +53,21 @@ void loop(){
   delay(1000);
 
 }
-
+void BrakeLeft() {
+  
+}
+void BrakeRight() {
+ 
+}
+void ReverseLeft() {
+  
+}
+void ReverseRight() {
+  
+}
+void DriveLeft() {
+  
+}
+void DriveRight(){
+  
+}
