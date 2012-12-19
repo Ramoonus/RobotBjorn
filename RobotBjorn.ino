@@ -5,13 +5,12 @@ void setup() {
   pinMode(9, OUTPUT); //Initiates Brake Channel A pin
 
   //Setup Channel B
-  pinMode(13, OUTPUT); //Initiates Motor Channel A pin
-  pinMode(8, OUTPUT);  //Initiates Brake Channel A pin
+  pinMode(13, OUTPUT); //Initiates Motor Channel B pin
+  pinMode(8, OUTPUT);  //Initiates Brake Channel B pin
 
 }
 
 void loop(){
-
 
   //Motor A forward @ full speed
   digitalWrite(12, HIGH); //Establishes forward direction of Channel A
@@ -23,14 +22,14 @@ void loop(){
   digitalWrite(8, LOW);   //Disengage the Brake for Channel B
   analogWrite(11, 123);    //Spins the motor on Channel B at half speed
 
-
+  // wait 3 seconds
   delay(3000);
 
 
   digitalWrite(9, HIGH);  //Engage the Brake for Channel A
-  digitalWrite(9, HIGH);  //Engage the Brake for Channel B
+  digitalWrite(8, HIGH);  //Engage the Brake for Channel B
 
-
+  // wait 1 second
   delay(1000);
 
 
@@ -44,17 +43,14 @@ void loop(){
   digitalWrite(8, LOW);   //Disengage the Brake for Channel B
   analogWrite(11, 255);   //Spins the motor on Channel B at full speed
 
-
+  // wait 3 seconds
   delay(3000);
 
-
   digitalWrite(9, HIGH);  //Engage the Brake for Channel A
-  digitalWrite(9, HIGH);  //Engage the Brake for Channel B
+  digitalWrite(8, HIGH);  //Engage the Brake for Channel B
 
-
+  // wait 1 second
   delay(1000);
 
 }
-
-
 
