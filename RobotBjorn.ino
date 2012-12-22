@@ -2,7 +2,9 @@
 // Channel B = left engine
 
 void setup() {
-
+  // Open Serial Port
+  Serial.begin(9600);  
+  
   //Setup Channel A
   pinMode(12, OUTPUT); //Initiates Motor Channel A pin
   pinMode(9, OUTPUT); //Initiates Brake Channel A pin
@@ -87,4 +89,10 @@ void DriveForward() {
 // Turn Left Light
 
 // Turn Right Light
+
+// Sensor Left
+
+// Sensor Middle
+
+// Sensor Right
 
