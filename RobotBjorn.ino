@@ -1,3 +1,6 @@
+// Channel A = right engine
+// Channel B = left engine
+
 void setup() {
 
   //Setup Channel A
@@ -8,66 +11,80 @@ void setup() {
   pinMode(13, OUTPUT); //Initiates Motor Channel B pin
   pinMode(8, OUTPUT);  //Initiates Brake Channel B pin
 
+  // Brake on start
+  Brake(); 
+
+  // Speed Limit
+#define EngineSpeed 128 
+  // No ; on end
+  // Min: 0
+  // Max: 255
 }
 
 void loop(){
 
-  //Motor A forward @ full speed
-  digitalWrite(12, HIGH); //Establishes forward direction of Channel A
-  digitalWrite(9, LOW);   //Disengage the Brake for Channel A
-  analogWrite(3, 255);   //Spins the motor on Channel A at full speed
+  // Test
+  Test();
 
-  //Motor B backward @ half speed
+
+}
+void Test() {
+  // Short test script
+  DriveForward(); 
+  delay(2500); 
+  Brake(); 
+  delay(2500);
+}
+// Brake functions
+void BrakeLeft() {
+  digitalWrite(8, HIGH);  //Engage the Brake for Channel B
+}
+void BrakeRight() {
+  digitalWrite(9, HIGH);  //Engage the Brake for Channel A
+}
+void Brake() {
+  BrakeLeft(); 
+  BrakeRight(); 
+}
+// Drive in reverse function
+void ReverseLeft() {
+  //Motor B backward @ full speed
   digitalWrite(13, LOW);  //Establishes backward direction of Channel B
   digitalWrite(8, LOW);   //Disengage the Brake for Channel B
-  analogWrite(11, 123);    //Spins the motor on Channel B at half speed
-
-  // wait 3 seconds
-  delay(3000);
-
-
-  digitalWrite(9, HIGH);  //Engage the Brake for Channel A
-  digitalWrite(8, HIGH);  //Engage the Brake for Channel B
-
-  // wait 1 second
-  delay(1000);
-
-
-  //Motor A forward @ full speed
-  digitalWrite(12, LOW);  //Establishes backward direction of Channel A
+  analogWrite(11, EngineSpeed);    //Spins the motor on Channel B at full speed
+}
+void ReverseRight() {
+  //Motor A backwards @ full speed
+  digitalWrite(12, LOW); //Establishes forward direction of Channel A
   digitalWrite(9, LOW);   //Disengage the Brake for Channel A
-  analogWrite(3, 123);    //Spins the motor on Channel A at half speed
-
+  analogWrite(3, EngineSpeed);   //Spins the motor on Channel A at full speed
+}
+void DriveReverse() {
+  ReverseLeft();
+  ReverseRight();
+}
+// Drive specific way function
+void DriveLeft() {
   //Motor B forward @ full speed
   digitalWrite(13, HIGH); //Establishes forward direction of Channel B
   digitalWrite(8, LOW);   //Disengage the Brake for Channel B
-  analogWrite(11, 255);   //Spins the motor on Channel B at full speed
-
-  // wait 3 seconds
-  delay(3000);
-
-  digitalWrite(9, HIGH);  //Engage the Brake for Channel A
-  digitalWrite(8, HIGH);  //Engage the Brake for Channel B
-
-  // wait 1 second
-  delay(1000);
-
-}
-void BrakeLeft() {
-  
-}
-void BrakeRight() {
- 
-}
-void ReverseLeft() {
-  
-}
-void ReverseRight() {
-  
-}
-void DriveLeft() {
-  
+  analogWrite(11, EngineSpeed);   //Spins the motor on Channel B at full speed
 }
 void DriveRight(){
-  
+  //Motor A forward @ full speed
+  digitalWrite(12, HIGH);  //Establishes forward direction of Channel A
+  digitalWrite(9, LOW);   //Disengage the Brake for Channel A
+  analogWrite(3, EngineSpeed);    //Spins the motor on Channel A at half speed
 }
+void DriveForward() {
+  DriveLeft();
+  DriveRight();
+}
+// Head Lights 
+
+// Brake Light
+
+// Turn Left Light
+
+// Turn Right Light
+
