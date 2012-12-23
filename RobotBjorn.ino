@@ -4,7 +4,7 @@
 void setup() {
   // Open Serial Port
   Serial.begin(9600);  
-  
+
   //Setup Channel A
   pinMode(12, OUTPUT); //Initiates Motor Channel A pin
   pinMode(9, OUTPUT); //Initiates Brake Channel A pin
@@ -17,17 +17,18 @@ void setup() {
   Brake(); 
 
   // Speed Limit
-#define EngineSpeed 128 
+#define EngineSpeed 192 
   // No ; on end
   // Min: 0
   // Max: 255
+  // Recommended: 192 for 5x AA
+  // Recommended 96 for 1x 9V
+  // Recommended: 64 over USB
 }
 
 void loop(){
 
-  // Test
-  Test();
-
+    Test();
 
 }
 void Test() {
@@ -110,17 +111,21 @@ int SensorLeft() {
 }
 // Sensor Middle
 int SensorMiddle() {
+  if( analogRead(6) ) { return 1; }
   return 0;
 }
 // Sensor Right
 int SensorRight() {
-  return 0; 
+  return 0;
 }
 // Current Sensing Channel A
 int CurrentSenseA() {
+  // Max: 3.3 V equals 2A
   return 0;
 }
 // Current Sensing Channel B
 int CurrentSenseB() {
+  // Max: 3.3 V equals 2A
   return 0;
 }
+
