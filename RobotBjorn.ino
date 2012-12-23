@@ -82,17 +82,45 @@ void DriveForward() {
   DriveLeft();
   DriveRight();
 }
+// Turn Left
+void TurnLeft() {
+  ReverseLeft();
+  DriveRight();
+}
+// Turn Right
+void TurnRight() {
+  ReverseRight();
+  DriveLeft();
+}
 // Head Lights 
-
+void HeadLights() {
+}
 // Brake Light
-
+void BrakeLight(){
+}
 // Turn Left Light
-
+void LeftLight() {
+}
 // Turn Right Light
-
+void RightLight() {
+}
 // Sensor Left
-
+int SensorLeft() {
+  return 0;
+}
 // Sensor Middle
-
+int SensorMiddle() {
+  return 0;
+}
 // Sensor Right
-
+int SensorRight() {
+  return 0; 
+}
+// Current Sensing Channel A
+int CurrentSenseA() {
+  return 0;
+}
+// Current Sensing Channel B
+int CurrentSenseB() {
+  return 0;
+}
