@@ -107,16 +107,18 @@ void RightLight() {
 }
 // Sensor Left
 int SensorLeft() {
-  return 0;
+  if( analogRead(A3) > 512 ) { return 1; } // please select right port
+  else return 0; 
 }
 // Sensor Middle
 int SensorMiddle() {
-  if( analogRead(6) ) { return 1; }
-  return 0;
+  if( analogRead(A3) > 512 ) { return 1; }
+  else return 0; 
 }
 // Sensor Right
 int SensorRight() {
-  return 0;
+  if( analogRead(A3) > 512 ) { return 1; } // please select right port
+  else return 0; 
 }
 // Current Sensing Channel A
 int CurrentSenseA() {
