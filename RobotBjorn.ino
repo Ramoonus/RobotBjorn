@@ -27,9 +27,16 @@ void setup() {
 }
 
 void loop(){
+  if (!SensorMiddle() ) { 
+    DriveForward(); 
+    Serial.println("Go with the flow!" );  
+  }
+  else { 
+    Brake(); 
+    Serial.println("Emergency brake");  
+  }
 
-    Test();
-
+  delay(1000);
 }
 void Test() {
   // Short test script
@@ -107,17 +114,23 @@ void RightLight() {
 }
 // Sensor Left
 int SensorLeft() {
-  if( analogRead(A3) > 512 ) { return 1; } // please select right port
+  if( analogRead(A5) > 512 ) { 
+    return 1; 
+  } // please select left port
   else return 0; 
 }
 // Sensor Middle
 int SensorMiddle() {
-  if( analogRead(A3) > 512 ) { return 1; }
+  if( analogRead(A5) > 512 ) { 
+    return 1; 
+  } // please select middle port
   else return 0; 
 }
 // Sensor Right
 int SensorRight() {
-  if( analogRead(A3) > 512 ) { return 1; } // please select right port
+  if( analogRead(A5) > 512 ) { 
+    return 1; 
+  } // please select right port
   else return 0; 
 }
 // Current Sensing Channel A
@@ -129,5 +142,29 @@ int CurrentSenseA() {
 int CurrentSenseB() {
   // Max: 3.3 V equals 2A
   return 0;
+}
+// Sensor Left Debug
+void SensorLeftDebug() {
+  Serial.println("Reading on A5");
+  Serial.println(analogRead(A5) );
+  Serial.println("Reading sensor left function");
+  Serial.println(SensorLeft() );
+  delay(1000);
+}
+// Sensor Middle Debug
+void SensorMiddleDebug() {
+  Serial.println("Reading on A5");
+  Serial.println(analogRead(A5) );
+  Serial.println("Reading sensor middle function");
+  Serial.println(SensorMiddle() );
+  delay(1000);
+}
+// Sensor Right Debug
+void SensorRightDebug() {
+  Serial.println("Reading on A5");
+  Serial.println(analogRead(A5) );
+  Serial.println("Reading sensor right function");
+  Serial.println(SensorRight() );
+  delay(1000);
 }
 
