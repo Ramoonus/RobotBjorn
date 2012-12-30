@@ -136,12 +136,14 @@ int SensorRight() {
 // Current Sensing Channel A
 int CurrentSenseA() {
   // Max: 3.3 V equals 2A
-  return 0;
+  // Output: value in mA
+  return map( analogRead(A0) , 0, 676, 0, 2000);
 }
 // Current Sensing Channel B
 int CurrentSenseB() {
   // Max: 3.3 V equals 2A
-  return 0;
+  // Output: value in mA
+  return map( analogRead(A1) , 0, 676, 0, 2000);
 }
 // Sensor Left Debug
 void SensorLeftDebug() {
