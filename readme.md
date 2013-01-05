@@ -12,34 +12,35 @@ See also [Compatibility](compatibility)
 
 ## Release Notes ##
 ### 1.2 ###
-- Engine Current Reading in mA for both channels A and B
+* Engine Current Reading in mA for both channels A and B
 
 ### 1.1 - 30-12-2012 ###
-- Updated Schematics
-- Pinconfiguration list
-- Extra functions for 1.2-2.0 released
-- Auto Start-Stop condition for use with 1 sensor
-- Readme
+* Updated Schematics
+* Pinconfiguration list
+* Extra functions for 1.2-2.0 released
+* Auto Start-Stop condition for use with 1 sensor
+* Readme
 
 ### 1.0 - 22-12-2012 ###
-- Created drive and brake functions to simplify controls
-- Test function to test drive and brake functions
-- Documented the code
-- Schematics
+* Created drive and brake functions to simplify controls
+* Test function to test drive and brake functions
+* Documented the code
+* Schematics
 
 ## To Do ##
-- Mod: ZigBee support using the [Digi XBee](http://www.digi.com/xbee/) using the [Arduino Wireless Shield](http://arduino.cc/en/Main/ArduinoWirelessShield) (or compatible)
-- LED Lights (front, back, left/right etc)
-- Horn (piezo speaker)
-- Extra IO using [Microchip MCP23016](http://nl.farnell.com/microchip/mcp23016-i-sp/ic-io-expander-16bit-spdip28/dp/1439389) via I2C
-- Auto Start-Stop condition for use with 3 sensors
-- Mod: [Arduino Due](http://arduino.cc/en/Main/ArduinoBoardDue) compatibility (3.3 V instead of 5 V)
-- Mod: [Texas Instruments MSP43](http://www.ti.com/msp430)0 support
-- Mod: Solar Powered
-- Mod: Lithium-Ion accu
-- Finish debugging code
-- Mod: [Parallax PING)))](http://www.parallax.com/Store/Sensors/ObjectDetection/tabid/176/CategoryID/51/List/0/SortField/0/Level/a/ProductID/92/Default.aspx)
-- Mod: [Maxbotix LV‑MaxSonar](http://www.maxbotix.com/Ultrasonic_Sensors.htm#LV-EZ)
-- Mod: Maxbotix HRLV‑MaxSonar
+* Mod: ZigBee support using the [Digi XBee](http://www.digi.com/xbee/) using the [Arduino Wireless Shield](http://arduino.cc/en/Main/ArduinoWirelessShield) (or compatible)
+* LED Lights (front, back, left/right etc)
+* LED Driver: MICREL SEMICONDUCTOR - MM5450YN
+* LED Driver: 
+* Sound: Horn (piezo speaker)
+* Mod: Extra IO using [Microchip MCP23016](http://nl.farnell.com/microchip/mcp23016-i-sp/ic-io-expander-16bit-spdip28/dp/1439389) via I2C
+* Mod: [Arduino Due](http://arduino.cc/en/Main/ArduinoBoardDue) compatibility (3.3 V instead of 5 V)
+* Mod: [Texas Instruments MSP43](http://www.ti.com/msp430)0 support
+* Mod: Solar Powered
+* Mod: Lithium-Ion accu Powered
+* Firmware: Debug Mode
+* Mod: [Parallax PING)))](http://www.parallax.com/Store/Sensors/ObjectDetection/tabid/176/CategoryID/51/List/0/SortField/0/Level/a/ProductID/92/Default.aspx)
+* Mod: [Maxbotix LV‑MaxSonar](http://www.maxbotix.com/Ultrasonic_Sensors.htm#LV-EZ)
+* Mod: Maxbotix HRLV‑MaxSonar
 * Mod: [Seeed Grove](http://www.seeedstudio.com/depot/grove-ultrasonic-ranger-p-960.html)
 
