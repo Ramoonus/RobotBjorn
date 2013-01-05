@@ -1,16 +1,18 @@
 # Robot Bjorn - an Arduino based open source robot #
 By [Ramoonus](http://www.ramoonus.nl)
 
+See also
+
+* [Compatibility](https://github.com/Ramoonus/RobotBjorn/blob/master/compatibility.md)
+* [Todo](https://github.com/Ramoonus/RobotBjorn/blob/master/todo.md)
+
+
 ## Software Toolkit ##
 I used the following software for the development:
 
 * [Arduino IDE](http://arduino.cc/en/Main/Software) 1.5.1
 * [MarkdownPad](http://markdownpad.com/) (for Windows)
 * [Fritzing](http://fritzing.org/) 0.7.11
-
-See also:
-[Compatibility](https://github.com/Ramoonus/RobotBjorn/blob/master/compatibility.md)
-Todo
 
 ## Release Notes ##
 ### 1.2 ###
