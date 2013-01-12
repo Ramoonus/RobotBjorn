@@ -7,6 +7,8 @@ See also
 * [Todo](https://github.com/Ramoonus/RobotBjorn/blob/master/todo.md)
 
 
+[Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RZ2HK2NADF4DC) through PayPal
+
 ## Software Toolkit ##
 I used the following software for the development:
 
