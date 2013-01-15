@@ -6,17 +6,22 @@ See also
 * [Compatibility](https://github.com/Ramoonus/RobotBjorn/blob/master/compatibility.md)
 * [Todo](https://github.com/Ramoonus/RobotBjorn/blob/master/todo.md)
 
-
-[Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RZ2HK2NADF4DC) through PayPal
+# Donate #
+The Robot itself costs approx. 100 Euro but modifications and tutorial material costs much more.
+Please sponsor this project by donating via PayPal using the link: 
+[Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RZ2HK2NADF4DC)
 
 ## Software Toolkit ##
 I used the following software for the development:
 
-* [Arduino IDE](http://arduino.cc/en/Main/Software) 1.5.1
+* [Arduino IDE](http://arduino.cc/en/Main/Software) 1.0.3 and 1.5.1
 * [MarkdownPad](http://markdownpad.com/) (for Windows)
 * [Fritzing](http://fritzing.org/) 0.7.11
 
 ## Release Notes ##
+### 1.3 (current dev version ###
+
+
 ### 1.2 ###
 * Engine Current Reading in mA for both channels A and B
 
