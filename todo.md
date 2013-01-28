@@ -20,3 +20,4 @@ A list of things to do in future versions
 * Mod: [Maxbotix LV‑MaxSonar](http://www.maxbotix.com/Ultrasonic_Sensors.htm#LV-EZ) & Maxbotix HRLV‑MaxSonar
 * Mod: [Seeed Grove](http://www.seeedstudio.com/depot/grove-ultrasonic-ranger-p-960.html)
 * Mod: Bluetooth: [Sparkfun RN42-XV Bluetooth Module - PCB Antenna](https://www.sparkfun.com/products/11601) and [RN41-XV Bluetooth Module - Chip Antenna](https://www.sparkfun.com/products/11600 )
+* Mod: Lights via [Sparkfun 74HC595 breakout](https://www.sparkfun.com/products/11512)
