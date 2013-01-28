@@ -1,9 +1,16 @@
-// Channel A = right engine
-// Channel B = left engine
+#define EngineSpeed 192 
+// Recommended: 192 for 5x AA
+// Recommended 96 for 1x 9V
+// Recommended: 64 over USB
+// Min: 0
+// Max: 255
 
 void setup() {
   // Open Serial Port
   Serial.begin(9600);  
+
+  // Channel A = right engin
+  // Channel B = left engine
 
   //Setup Channel A
   pinMode(12, OUTPUT); //Initiates Motor Channel A pin
@@ -15,18 +22,22 @@ void setup() {
 
   // Brake on start
   Brake(); 
-
-  // Speed Limit
-#define EngineSpeed 192 
-  // No ; on end
-  // Min: 0
-  // Max: 255
-  // Recommended: 192 for 5x AA
-  // Recommended 96 for 1x 9V
-  // Recommended: 64 over USB
+  Serial.println('Startup procedure completed');
+  Serial.println('Brake initialized');
 }
 
 void loop(){
+  // do something
+}
+void Test() {
+  // Short test script
+  DriveForward(); 
+  delay(2500); 
+  Brake(); 
+  delay(2500);
+}
+
+void TestSensor() {
   if (!SensorMiddle() ) { 
     DriveForward(); 
     Serial.println("Go with the flow!" );  
@@ -38,13 +49,7 @@ void loop(){
 
   delay(1000);
 }
-void Test() {
-  // Short test script
-  DriveForward(); 
-  delay(2500); 
-  Brake(); 
-  delay(2500);
-}
+
 // Brake functions
 void BrakeLeft() {
   digitalWrite(8, HIGH);  //Engage the Brake for Channel B
@@ -169,4 +174,5 @@ void SensorRightDebug() {
   Serial.println(SensorRight() );
   delay(1000);
 }
+
 
