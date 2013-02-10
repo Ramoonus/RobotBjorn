@@ -9,7 +9,7 @@ void setup() {
   // Open Serial Port
   Serial.begin(9600);  
 
-  // Channel A = right engin
+  // Channel A = right engine
   // Channel B = left engine
 
   //Setup Channel A
