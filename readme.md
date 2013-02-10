@@ -2,7 +2,7 @@
 By [Ramoonus](http://www.ramoonus.nl)
 
 RobotBjorn is a Arduino based 4 wheel drive robot. 
-It uses basic Arduino Shields and open source firmware (writting in C++, Wiring and Processing)
+It uses basic Arduino Shields and open source firmware (writting in C++, [Wiring](http://wiring.org.co/) and [Processing](http://www.processing.org/))
 The Robot costs approx. 100 EURO to build and requires little expertise.
 
 Compatibility with third-party shields and platforms is described in the [Compatibility](compatibility.md) document.
@@ -23,6 +23,9 @@ I used the following software for the development:
 * [Processing](http://processing.org/download/ "Download Processing") 2.0 Beta 7
 
 ## Release Notes ##
+### 1.4 dev ###
+*
+
 ### 1.3 - 10-2-2013 ###
 * Improved Documentation (see [Relative links in markup files - GitHub blog](https://github.com/blog/1395-relative-links-in-markup-files) )
 * Primary development platform is now Arduino 1.5
