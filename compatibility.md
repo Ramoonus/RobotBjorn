@@ -6,6 +6,7 @@
 * Arduino Uno R3 (primairy goal)
 * Arduino Leonardo R3
 * Arduino Ethernet
+* [Sparkfun RedBoard](https://www.sparkfun.com/products/11575)
 
 ### Untested ###
 Untested but possibly working:
@@ -26,10 +27,14 @@ Untested but possibly working:
 * Arduino LilyPad 
 
 ## Shield Compatibility ##
+
 ### Confirmed working ###
-* Motor Shield R3 (primairy goal)
-* Wireless Shield 
-* Ethernet Shield R3
-* Arduino WiFi Shield
+
+* Arduino Motor Shield R3 (primairy goal)
+* Arduino Wireless Shield 
+* Arduino Ethernet Shield R3
 
 ### Untested ###
+* [Sparkfun Ardumoto](https://www.sparkfun.com/products/9815)
+* [Sparkfun  GPS Shield](https://www.sparkfun.com/products/10346)
+* Arduino WiFi Shield
