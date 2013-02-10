@@ -222,3 +222,12 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+// Update Shiftregister
+byte leds = 0; // empty on start
+void updateShiftRegister()
+{
+   digitalWrite(latchPin, LOW);
+   shiftOut(dataPin, clockPin, LSBFIRST, leds);
+   digitalWrite(latchPin, HIGH);
+}
+
