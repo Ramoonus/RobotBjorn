@@ -12,6 +12,7 @@ A list of things to do in future versions
 
 * Mod: ZigBee support using the [Digi XBee](http://www.digi.com/xbee/) using the [Arduino Wireless Shield](http://arduino.cc/en/Main/ArduinoWirelessShield) (or compatible)
 * Mod: I2C Expander using [Microchip MCP23016](http://nl.farnell.com/microchip/mcp23016-i-sp/ic-io-expander-16bit-spdip28/dp/1439389) via I2C
+* Mod: I2C Expander using [Microchip MCP23017](http://nl.farnell.com/microchip/mcp23017-e-sp/ic-io-expander-16bit-i2c-28dip/dp/1332088) via I2C using A[dafruit-MCP23017-Arduino-Library](https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library)
 * Mod: [Arduino Due](http://arduino.cc/en/Main/ArduinoBoardDue) compatibility (3.3 V instead of 5 V)
 * Mod: [Texas Instruments MSP430](http://www.ti.com/msp430) support
 * Mod: Solar Powered
