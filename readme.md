@@ -9,6 +9,8 @@ Compatibility with third-party shields and platforms is described in the [Compat
 
 Future development is specified in a [Todo](todo.md)
 
+Named after [Asbjørn A Mikkelsen](https://twitter.com/neslekkim)
+
 # Donate #
 The Robot itself costs approx. 100 Euro but modifications and tutorial material costs much more.
 Please sponsor this project by donating via PayPal using the link: 
@@ -24,8 +26,9 @@ I used the following software for the development:
 
 ## Release Notes ##
 ### 1.4 dev ###
-*
+* Updated readme
 
+ 
 ### 1.3 - 10-2-2013 ###
 * Improved Documentation (see [Relative links in markup files - GitHub blog](https://github.com/blog/1395-relative-links-in-markup-files) )
 * Primary development platform is now Arduino 1.5
