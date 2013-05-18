@@ -17,10 +17,10 @@ Please sponsor this project by donating via PayPal using the link:
 ## Software Toolkit ##
 I used the following software for the development:
 
-* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.4 and 1.5.2
+* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.5 and 1.5.2
 * [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
-* [Fritzing](http://fritzing.org/ "Download Fritzing") 0.7.11b
-* [Processing](http://processing.org/download/ "Download Processing") 2.0 Beta 7
+* [Fritzing](http://fritzing.org/ "Download Fritzing") 0.7.12
+* [Processing](http://processing.org/download/ "Download Processing") 2.0 Beta 8
 
 ## Release Notes ##
 ### 1.4 dev ###
