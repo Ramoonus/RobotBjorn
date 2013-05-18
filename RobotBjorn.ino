@@ -38,10 +38,10 @@ void setup() {
   pinMode(latchPin, OUTPUT);
   pinMode(dataPin, OUTPUT);  
   pinMode(clockPin, OUTPUT);
-  
+
   // Turn on Headlights
   HeadLights();
-  
+
   // Ending pin configuration and other startup routines
   Serial.println('Startup procedure completed');
 
@@ -226,8 +226,9 @@ void ReverseLightOff(){
 byte leds = 0; // empty on start
 void updateShiftRegister()
 {
-   digitalWrite(latchPin, LOW);
-   shiftOut(dataPin, clockPin, LSBFIRST, leds);
-   digitalWrite(latchPin, HIGH);
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, LSBFIRST, leds);
+  digitalWrite(latchPin, HIGH);
 }
+
 
