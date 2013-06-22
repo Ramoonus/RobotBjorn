@@ -3,31 +3,31 @@ By [Ramoonus](http://www.ramoonus.nl)
 
 RobotBjorn is a Arduino based 4 wheel drive robot. 
 It uses basic Arduino Shields and open source firmware (writting in C++, [Wiring](http://wiring.org.co/) and [Processing](http://www.processing.org/))
-The Robot costs approx. 100 EURO to build and requires little expertise.
 
 Compatibility with third-party shields and platforms is described in the [Compatibility](compatibility.md) document.
 
 Future development is specified in a [Todo](todo.md)
 
-Named after [Asbjørn A Mikkelsen](https://twitter.com/neslekkim)
+RobotBjorn is named Bjorn, after [Asbjørn A Mikkelsen](https://twitter.com/neslekkim)
 
-# Donate #
+## Donate ##
 The Robot itself costs approx. 100 Euro but modifications and tutorial material costs much more.
-Please sponsor this project by donating via PayPal using the link: 
+Please sponsor me and this project by donating via PayPal using the link: 
 [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RZ2HK2NADF4DC "Donate through PayPal")
 
 ## Software Toolkit ##
 I used the following software for the development:
 
-* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.5 and 1.5.2
+* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
 * [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
-* [Fritzing](http://fritzing.org/ "Download Fritzing") 0.7.12
-* [Processing](http://processing.org/download/ "Download Processing") 2.0 Beta 8
+* [Fritzing](http://fritzing.org/ "Download Fritzing") 
+* [Processing](http://processing.org/download/ "Download Processing") 2.0.x
 
 ## Release Notes ##
 ### 1.4 dev ###
 * Updated readme
-
+* Removed software version numbers. Preferred version: latest stable
+* Updated schematics to use official Arduino shields
  
 ### 1.3 - 10-2-2013 ###
 * Improved Documentation (see [Relative links in markup files - GitHub blog](https://github.com/blog/1395-relative-links-in-markup-files) )
@@ -55,4 +55,3 @@ I used the following software for the development:
 * Test function to test drive and brake functions
 * Documented the code (see source)
 * Drawing Schematics (using Fritzing)
-
