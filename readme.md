@@ -18,16 +18,18 @@ Please sponsor me and this project by donating via PayPal using the link:
 ## Software Toolkit ##
 I used the following software for the development:
 
-* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
-* [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
-* [Fritzing](http://fritzing.org/ "Download Fritzing") 
-* [Processing](http://processing.org/download/ "Download Processing") 2.0.x
+* Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
+* Documents: [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
+* Schematics: [Fritzing](http://fritzing.org/ "Download Fritzing") 
+* Client: [Processing](http://processing.org/download/ "Download Processing") 2.0.x
 
 ## Release Notes ##
 ### 1.4 dev ###
-* Updated readme
+* Updated readme.md
 * Removed software version numbers. Preferred version: latest stable
 * Updated schematics to use official Arduino shields
+* Documents now use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
+* Todo list now in GitHub Flavered Markdown
  
 ### 1.3 - 10-2-2013 ###
 * Improved Documentation (see [Relative links in markup files - GitHub blog](https://github.com/blog/1395-relative-links-in-markup-files) )
