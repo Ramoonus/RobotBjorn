@@ -24,12 +24,13 @@ I used the following software for the development:
 * Client: [Processing](http://processing.org/download/ "Download Processing") 2.0.x
 
 ## Release Notes ##
-### 1.4 dev ###
+### 1.4 - 25-7-2013 ###
 * Updated readme.md
 * Removed software version numbers. Preferred version: latest stable
 * Updated schematics to use official Arduino shields
 * Documents now use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
 * Todo list now in GitHub Flavered Markdown
+* Added keyboard controls using serial input. WSAD to move. X to stop. Z to check activity.
  
 ### 1.3 - 10-2-2013 ###
 * Improved Documentation (see [Relative links in markup files - GitHub blog](https://github.com/blog/1395-relative-links-in-markup-files) )
