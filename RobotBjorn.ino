@@ -23,6 +23,8 @@ void setup() {
   // Open Serial Port
   Serial.begin(9600);  
 
+
+
   // Channel A = right engine
   // Channel B = left engine
 
@@ -48,14 +50,48 @@ void setup() {
   // Brake on start
   Brake(); 
   Serial.println('Startup Brake initialized');
+  
+  Serial.println("Run keyboard control");
 }
 
 // Execute Procedure
 void loop(){
-  // do something
+  //Test
+  //test();
 
-  // Demo
-  Test();
+  // Respond to keyboard
+  if(Serial.available()){
+    char val = Serial.read();
+    if(val != -1)
+    {
+      switch(val)
+      {
+      case 'w'://Move Forward
+        //advance (255,255);   //move forward in max speed
+        break;
+      case 's'://Move Backward
+        //back_off (255,255);   //move back in max speed
+        break;
+      case 'a'://Turn Left
+        //turn_L (100,100);        
+        break;       
+      case 'd'://Turn Right
+        //turn_R (100,100);
+        break;
+      case 'z':
+        Serial.println("Hello");
+        break;
+      case 'x':
+        //stop();
+        break;
+      }
+    }
+    else ; //stop();  
+  }
+
+  // AutoPilot
+
+
 }
 void Test() {
   // Forward
@@ -80,6 +116,8 @@ void Brake() {
   BrakeRight(); 
   BrakeLight();
 }
+// Alias stop as brake
+void stop() { Brake; } 
 
 // Drive in reverse function
 void ReverseLeft() {
@@ -230,5 +268,6 @@ void updateShiftRegister()
   shiftOut(dataPin, clockPin, LSBFIRST, leds);
   digitalWrite(latchPin, HIGH);
 }
+
 
 
