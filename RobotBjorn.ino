@@ -50,16 +50,38 @@ void setup() {
   // Brake on start
   Brake(); 
   Serial.println('Startup Brake initialized');
-  
+
   Serial.println("Run keyboard control");
 }
 
 // Execute Procedure
 void loop(){
+
   //Test
   //test();
 
-  // Respond to keyboard
+  // Respond to Keyboard
+  //KeyboardControl();
+
+  // AutoPilot
+  //AutoPilot();
+
+}
+void Test() {
+  // Forward
+  DriveForward(); 
+  // Wait
+  delay(2500); 
+  // Backward
+  Brake(); 
+  // Wait
+  delay(2500);
+}
+
+void AutoPilot() {
+}
+
+void KeyboardControl(){ 
   if(Serial.available()){
     char val = Serial.read();
     if(val != -1)
@@ -88,21 +110,32 @@ void loop(){
     }
     else ; //stop();  
   }
+}
 
-  // AutoPilot
+void Gearbox() {
+  // Depends motor PWM by 'gear'
+  // 0
 
+  // 1
+
+  // 2
+
+  // 3
+
+  // 4
+
+  // 5
+
+  // 6
+
+  // 7
+
+  // 8
+
+  // 9
 
 }
-void Test() {
-  // Forward
-  DriveForward(); 
-  // Wait
-  delay(2500); 
-  // Backward
-  Brake(); 
-  // Wait
-  delay(2500);
-}
+
 
 // Brake functions
 void BrakeLeft() {
@@ -117,7 +150,9 @@ void Brake() {
   BrakeLight();
 }
 // Alias stop as brake
-void stop() { Brake; } 
+void stop() { 
+  Brake; 
+} 
 
 // Drive in reverse function
 void ReverseLeft() {
@@ -268,6 +303,8 @@ void updateShiftRegister()
   shiftOut(dataPin, clockPin, LSBFIRST, leds);
   digitalWrite(latchPin, HIGH);
 }
+
+
 
 
 
