@@ -39,16 +39,17 @@ void setup() {
 
   // Turn on Headlights
   HeadLights();
-
-  // Ending pin configuration and other startup routines
-  Serial.println('Startup procedure completed');
-
+  TailLights();
+  Serial.println('Lights are on');
 
   // Brake on start
   Brake(); 
   Serial.println('Startup Brake initialized');
 
-  Serial.println("Run keyboard control");
+  //Serial.println("Run keyboard control");
+
+  // Ending pin configuration and other startup routines
+  Serial.println('Startup procedure completed');
 }
 
 // Execute Procedure
@@ -271,6 +272,9 @@ void HeadLights() {
   // Enable Headlight left
   // Enable Headlight right
 }
+// Tail Lights
+void TailLights() {
+}
 // Brake Light
 void BrakeLight(){
   // Enable Breaklight left
@@ -293,3 +297,4 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
