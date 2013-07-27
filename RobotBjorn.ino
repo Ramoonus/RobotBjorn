@@ -50,6 +50,8 @@ void setup() {
 
   // Ending pin configuration and other startup routines
   Serial.println('Startup procedure completed');
+
+
 }
 
 // Execute Procedure
@@ -115,19 +117,18 @@ void KeyboardControl(){
       switch(val)
       {
       case 'w'://Move Forward
-        //advance (255,255);   //move forward in max speed
         DriveForward();
         break;
       case 's'://Move Backward
-        //back_off (255,255);   //move back in max speed
         DriveReverse();
         break;
       case 'a'://Turn Left
-        DriveLeft();   
+        Brake();
+        TurnLeft();   
         break;       
       case 'd'://Turn Right
-        DriveRight();
-        //turn_R (100,100);
+        Brake();
+        TurnRight();
         break;
       case 'z':
         Serial.println("Hello");
@@ -136,7 +137,53 @@ void KeyboardControl(){
         //stop();
         Brake();
         break;
+
+        // Gearbox
+      case '0'://Gear 0
+        Gearbox(0);
+        break;
+      case '1'://Gear 0
+        Gearbox(1);
+        break;
+      case '2'://Gear 0
+        Gearbox(2);
+        break;
+      case '3'://Gear 0
+        Gearbox(3);
+        break;
+      case '4'://Gear 0
+        Gearbox(4);
+        break;
+      case '5'://Gear 0
+        Gearbox(5);
+        break;
+      case '6'://Gear 0
+        Gearbox(6);
+        break;
+      case '7'://Gear 0
+        Gearbox(7);
+        break;
+      case '8'://Gear 0
+        Gearbox(8);
+        break;
+      case '9'://Gear 0
+        Gearbox(9);
+        break;
+
+      case 't'://Test
+        Serial.println("Enabling Test Procedure");
+        Test();
+        Serial.println("Done");
+        break;
+
+      case 'p'://P for AutoPilot
+        Serial.println("Enabling AutoPilot");
+        AutoPilot();
+                Serial.println("Done");
+        break;
       }
+
+
     }
     else ; //stop();  
   }
@@ -144,8 +191,14 @@ void KeyboardControl(){
 
 void Gearbox( int gear) {
   // Depends motor PWM by 'gear'
-  map(gear, 0, 9, 0, 255);
-
+  int  EngineSpeed = map(gear, 0, 9, 0, 255);
+  Serial.print("Gear: ");
+  Serial.println(gear);
+  Serial.print("PWM Speed: ");
+  Serial.println(EngineSpeed);
+  Serial.print("Percentage power: ");
+  Serial.print( EngineSpeed /255 );
+  Serial.println("%");
 }
 
 
@@ -214,6 +267,7 @@ void TurnLeft() {
 void TurnRight() {
   RightLight(); 
   ReverseRight();
+  DriveLeft();
   RightLightOff();
 }
 
@@ -271,7 +325,7 @@ void SensorRightDebug() {
 // Horn / Beeper 
 void Horn() {
   //tone(pin, frequency, duration)  
-  tone(HornPort, 262, 1500);
+  //tone(HornPort, 262, 1500);
   // Frequency 262 = C4
 }
 // Head Lights 
@@ -304,5 +358,9 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
+
+
+
 
 
