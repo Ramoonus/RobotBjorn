@@ -59,7 +59,8 @@ void setup() {
 
 // Execute Procedure
 void loop(){
-
+  // Gearbox 
+  
   //Test
   //test();
 
@@ -117,32 +118,10 @@ void KeyboardControl(){
 
 void Gearbox( int gear) {
   // Depends motor PWM by 'gear'
-  // Default
-  int EngineSpeed = 192;
-  
-  // 0
-  //int EngineSpeed = 0;
+  if(!gear) { int EngineSpeed = 192; }
+ 
+  map(gear, 0, 9, 0, 255);
 
-  // 1
-
-  // 2
-
-  // 3
-
-  // 4
-
-  // 5
-
-  // 6
-
-  // 7
-
-  // 8
-  
-  // 9
-
-  // 10
-  //int EngineSpeed = 255;
 }
 
 
