@@ -31,10 +31,6 @@ void setup() {
   pinMode(13, OUTPUT); //Initiates Motor Channel B pin
   pinMode(8, OUTPUT);  //Initiates Brake Channel B pin
 
-  // Lights (using shift register)
-  pinMode(latchPin, OUTPUT);
-  pinMode(dataPin, OUTPUT);  
-  pinMode(clockPin, OUTPUT);
 
   // Turn on Headlights
   HeadLights();
