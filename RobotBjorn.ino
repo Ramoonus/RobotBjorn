@@ -13,11 +13,6 @@ const char SensorRightPort  = A5;
 // Piezo Speaker
 const char HornPort = A5; 
 
-// Lights (using shift register)
-const int latchPin = 0; //5
-const int clockPin = 0; //6
-const int dataPin = 0; //4
-
 // Startup Procedure
 void setup() {
   // Open Serial Port
@@ -295,16 +290,5 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
-// Update Shiftregister
-byte leds = 0; // empty on start
-void updateShiftRegister()
-{
-  digitalWrite(latchPin, LOW);
-  shiftOut(dataPin, clockPin, LSBFIRST, leds);
-  digitalWrite(latchPin, HIGH);
-}
-
-
-
 
 
