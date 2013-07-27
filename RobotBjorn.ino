@@ -7,7 +7,7 @@ const char SensorRightPort  = A5;
 const char HornPort = A5; 
 
 // Motor
-int EngineSpeed = 192;
+int EngineSpeed = 128;
 // Recommended: 192 for 5x AA
 // Recommended 96 for 1x 9V
 // Recommended: 64 over USB
@@ -60,10 +60,11 @@ void loop(){
   //test();
 
   // Respond to Keyboard
-  //KeyboardControl();
+  KeyboardControl();
 
   // AutoPilot
-  //AutoPilot();
+  //AutoPilot(); 
+  //delay(500);
 
 }
 void Test() {
@@ -81,14 +82,16 @@ void AutoPilot() {
 
   if(SensorMiddle() ) {   // On something insight
     Brake();              // Brake
-
-      if (!SensorLeft) { // Look Left
+    Serial.println("Stopped because I detected something");
+    if (!SensorLeft) { // Look Left
+      Serial.println("Going left");
       TurnLeft; 
       delay(500);
       Brake;
     }              
 
     else if (!SensorRight) { // Or look right 
+      Serial.println("Going right");
       TurnRight; 
       delay(500);
       Brake; 
@@ -113,14 +116,17 @@ void KeyboardControl(){
       {
       case 'w'://Move Forward
         //advance (255,255);   //move forward in max speed
+        DriveForward();
         break;
       case 's'://Move Backward
         //back_off (255,255);   //move back in max speed
+        DriveReverse();
         break;
       case 'a'://Turn Left
-        //turn_L (100,100);        
+        DriveLeft();   
         break;       
       case 'd'://Turn Right
+        DriveRight();
         //turn_R (100,100);
         break;
       case 'z':
@@ -128,6 +134,7 @@ void KeyboardControl(){
         break;
       case 'x':
         //stop();
+        Brake();
         break;
       }
     }
@@ -297,4 +304,5 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
 
