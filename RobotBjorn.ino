@@ -1,4 +1,4 @@
-const int EngineSpeed = 192;
+int EngineSpeed = 192;
 // Recommended: 192 for 5x AA
 // Recommended 96 for 1x 9V
 // Recommended: 64 over USB
