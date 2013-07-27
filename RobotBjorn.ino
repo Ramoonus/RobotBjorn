@@ -37,6 +37,7 @@ void setup() {
 
   // Ending pin configuration and other startup routines
   Serial.println('Startup procedure completed');
+	
 
   // Brake on start
   Brake(); 
@@ -103,12 +104,13 @@ void KeyboardControl(){
   }
 }
 
-void Gearbox() {
+void Gearbox( int gear) {
   // Depends motor PWM by 'gear'
   // Default
   int EngineSpeed = 192;
   
   // 0
+  //int EngineSpeed = 0;
 
   // 1
 
@@ -125,9 +127,11 @@ void Gearbox() {
   // 7
 
   // 8
-
+  
   // 9
 
+  // 10
+  //int EngineSpeed = 255;
 }
 
 
