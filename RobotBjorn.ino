@@ -48,7 +48,7 @@ void setup() {
 
   // Ending pin configuration and other startup routines
   Serial.println('Startup procedure completed');
-	
+
 
   // Brake on start
   Brake(); 
@@ -60,7 +60,7 @@ void setup() {
 // Execute Procedure
 void loop(){
   // Gearbox 
-  
+
   //Test
   //test();
 
@@ -83,12 +83,36 @@ void Test() {
 }
 
 void AutoPilot() {
+
+  if(SensorMiddle() ) {   // On something insight
+    Brake();              // Brake
+
+      if (!SensorLeft) { // Look Left
+      TurnLeft; 
+      delay(500);
+      Brake;
+    }              
+
+    else if (!SensorRight) { // Or look right 
+      TurnRight; 
+      delay(500);
+      Brake; 
+    }          
+
+    else { // Or do nothing
+      Horn(); 
+      delay(1000);
+    }              
+  }
+  else {
+    DriveForward(); 
+  }
 }
 
 void KeyboardControl(){ 
   if(Serial.available()){
     char val = Serial.read();
-    if(val != -1)
+    if(val != -1) // if some value inputted 
     {
       switch(val)
       {
@@ -118,8 +142,6 @@ void KeyboardControl(){
 
 void Gearbox( int gear) {
   // Depends motor PWM by 'gear'
-  if(!gear) { int EngineSpeed = 192; }
- 
   map(gear, 0, 9, 0, 255);
 
 }
@@ -256,4 +278,6 @@ void Horn() {
   tone(HornPort, 262, 1500);
   // Frequency 262 = C4
 }
+
+
 
