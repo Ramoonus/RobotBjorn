@@ -109,6 +109,9 @@ void KeyboardControl(){
 
 void Gearbox() {
   // Depends motor PWM by 'gear'
+  // Default
+  int EngineSpeed = 192;
+  
   // 0
 
   // 1
