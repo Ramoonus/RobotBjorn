@@ -1,3 +1,13 @@
+// Lights.h
+extern void HeadLights();
+extern void BrakeLight();
+extern void LeftLight();
+extern void RightLight();
+extern void LeftLightOff();
+extern void RightLightOff();
+extern void ReverseLight();
+extern void ReverseLightOff();
+
 int EngineSpeed = 192;
 // Recommended: 192 for 5x AA
 // Recommended 96 for 1x 9V
@@ -15,6 +25,7 @@ const char HornPort = A5;
 
 // Startup Procedure
 void setup() {
+
   // Open Serial Port
   Serial.begin(9600);  
 
@@ -266,32 +277,4 @@ void Horn() {
   tone(HornPort, 262, 1500);
   // Frequency 262 = C4
 }
-// Head Lights 
-void HeadLights() {
-  // Enable Headlight left
-  // Enable Headlight right
-}
-// Brake Light
-void BrakeLight(){
-  // Enable Breaklight left
-  // Enable Breaklight right
-}
-// Turn Left Light
-void LeftLight() {
-}
-// Turn Left Light Off
-void LeftLightOff() {
-}
-// Turn Right Light
-void RightLight() {
-}
-// Turn Right Light
-void RightLightOff() {
-}
-// White lights when in reverse
-void ReverseLight(){
-}
-void ReverseLightOff(){
-}
-
 
