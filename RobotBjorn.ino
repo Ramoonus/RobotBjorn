@@ -1,20 +1,3 @@
-// Lights.h
-extern void HeadLights();
-extern void BrakeLight();
-extern void LeftLight();
-extern void RightLight();
-extern void LeftLightOff();
-extern void RightLightOff();
-extern void ReverseLight();
-extern void ReverseLightOff();
-
-int EngineSpeed = 192;
-// Recommended: 192 for 5x AA
-// Recommended 96 for 1x 9V
-// Recommended: 64 over USB
-// Min: 0
-// Max: 255
-
 // Sensors
 const char SensorLeftPort    = A5;
 const char SensorMiddlePort  = A5;
@@ -23,13 +6,18 @@ const char SensorRightPort  = A5;
 // Piezo Speaker
 const char HornPort = A5; 
 
+// Motor
+int EngineSpeed = 192;
+// Recommended: 192 for 5x AA
+// Recommended 96 for 1x 9V
+// Recommended: 64 over USB
+// Min: 0
+// Max: 255
+
 // Startup Procedure
 void setup() {
-
   // Open Serial Port
   Serial.begin(9600);  
-
-
 
   // Channel A = right engine
   // Channel B = left engine
@@ -41,6 +29,12 @@ void setup() {
   //Setup Channel B
   pinMode(13, OUTPUT); //Initiates Motor Channel B pin
   pinMode(8, OUTPUT);  //Initiates Brake Channel B pin
+
+
+  // Sensor
+  pinMode(SensorLeftPort, INPUT);
+  pinMode(SensorMiddlePort, INPUT);
+  pinMode(SensorRightPort, INPUT);
 
 
   // Turn on Headlights
@@ -217,24 +211,18 @@ void TurnRight() {
 
 // Sensor Left
 int SensorLeft() {
-  if( analogRead(SensorLeftPort) > 512 ) { 
-    return 1; 
-  }
-  else return 0; 
+  if(digitalRead(SensorLeftPort) == HIGH) return 1;
+  else  return 0; 
 }
 // Sensor Middle
 int SensorMiddle() {
-  if( analogRead(SensorMiddlePort) > 512 ) { 
-    return 1; 
-  }
-  else return 0; 
+  if(digitalRead(SensorMiddlePort) == HIGH) return 1;
+  else  return 0; 
 }
 // Sensor Right
 int SensorRight() {
-  if( analogRead(SensorRightPort) > 512 ) { 
-    return 1; 
-  } 
-  else return 0; 
+  if(digitalRead(SensorRightPort) == HIGH) return 1;
+  else  return 0; 
 }
 // Current Sensing Channel A
 int CurrentSenseA() {
@@ -278,6 +266,30 @@ void Horn() {
   tone(HornPort, 262, 1500);
   // Frequency 262 = C4
 }
-
-
-
+// Head Lights 
+void HeadLights() {
+  // Enable Headlight left
+  // Enable Headlight right
+}
+// Brake Light
+void BrakeLight(){
+  // Enable Breaklight left
+  // Enable Breaklight right
+}
+// Turn Left Light
+void LeftLight() {
+}
+// Turn Left Light Off
+void LeftLightOff() {
+}
+// Turn Right Light
+void RightLight() {
+}
+// Turn Right Light
+void RightLightOff() {
+}
+// White lights when in reverse
+void ReverseLight(){
+}
+void ReverseLightOff(){
+}
