@@ -83,7 +83,9 @@ void Test() {
   delay(2500);
   TurnRight();
   delay(2500);
-  Horn();   Horn();   Horn(); 
+  Horn();   
+  Horn();   
+  Horn(); 
   delay(2500);
 }
 
@@ -199,6 +201,7 @@ void KeyboardControl(){
 void Gearbox( int gear) {
   // Depends motor PWM by 'gear'
   int  EngineSpeed = map(gear, 0, 9, 0, 255);
+
   if(Debug) {
     Serial.print("Gear: ");
     Serial.println(gear);
@@ -222,7 +225,7 @@ void Brake() {
   // Brake
   BrakeLeft(); 
   BrakeRight(); 
-  // Brakel ights
+  // Brake lights
   BrakeLight();
 }
 
@@ -240,9 +243,12 @@ void ReverseRight() {
   analogWrite(MotorChannelAPWMpin, EngineSpeed);   //Spins the motor on Channel A 
 }
 void DriveReverse() {
+  // Lights on
   ReverseLight();
+  // Reverse
   ReverseLeft();
   ReverseRight();
+  // Lights off
   ReverseLightOff();
 }
 
@@ -343,7 +349,7 @@ void HeadLights() {
 // Tail Lights
 void TailLights() {
   // Enable Taillight Left
-    // Enable Taillight Right
+  // Enable Taillight Right
 }
 // Brake Light
 void BrakeLight(){
@@ -367,4 +373,5 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
 
