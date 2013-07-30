@@ -15,11 +15,16 @@ const char MotorChannelAPWMpin = 3;
 const char MotorChannelBpin = 13;
 const char BrakeBpin = 8;
 const char MotorChannelBPWMpin = 11;
+
 // Horn
 const char HornPin = 2; 
 
 // Debug
 const boolean Debug = false;
+
+// Motherboard
+const boolean Due = false; // is this an arduino due?
+const boolean Mega = false; // is this an arduino mega?
 
 // Startup Procedure
 void setup() {
