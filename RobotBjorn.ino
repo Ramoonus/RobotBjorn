@@ -303,13 +303,23 @@ int SensorRight() {
 int CurrentSenseA() {
   // Max: 3.3 V equals 2A
   // Output: value in mA
-  return map( analogRead(A0) , 0, 676, 0, 2000);
+  if(Due) {
+    return map( analogRead(A0) , 0, 1023, 0, 2000);
+  }
+  else {    
+    return map( analogRead(A0) , 0, 676, 0, 2000);
+  }
 }
 // Current Sensing Channel B
 int CurrentSenseB() {
   // Max: 3.3 V equals 2A
   // Output: value in mA
-  return map( analogRead(A1) , 0, 676, 0, 2000);
+  if(Due) { 
+    return map( analogRead(A1) , 0, 1023, 0, 2000); 
+  }
+  else {    
+    return map( analogRead(A0) , 0, 676, 0, 2000);
+  }
 }
 // Sensor Left Debug
 void SensorLeftDebug() {
@@ -373,5 +383,7 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
+
 
 
