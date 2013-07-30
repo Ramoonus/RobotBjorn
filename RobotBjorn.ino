@@ -184,7 +184,7 @@ void KeyboardControl(){
         break;
 
       case 'h'://Horn
-        Serial.println("Feeling horny!");
+        Serial.println("Feeling horny?");
         Horn();
 
         break;
