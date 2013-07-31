@@ -286,17 +286,17 @@ void TurnRight() {
 
 // Sensor Left
 int SensorLeft() {
-  if(digitalRead(SensorLeftPin) == HIGH) return 1;
+  if(digitalRead(SensorLeftPin) == LOW) return 1;
   else  return 0; 
 }
 // Sensor Middle
 int SensorMiddle() {
-  if(digitalRead(SensorMiddlePin) == HIGH) return 1;
+  if(digitalRead(SensorMiddlePin) == LOW) return 1;
   else  return 0; 
 }
 // Sensor Right
 int SensorRight() {
-  if(digitalRead(SensorRightPin) == HIGH) return 1;
+  if(digitalRead(SensorRightPin) == LOW) return 1;
   else  return 0; 
 }
 // Current Sensing Channel A
