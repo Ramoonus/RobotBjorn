@@ -285,17 +285,17 @@ void TurnRight() {
 }
 
 // Sensor Left
-int SensorLeft() {
+boolean SensorLeft() {
   if(digitalRead(SensorLeftPin) == LOW) return 1;
   else  return 0; 
 }
 // Sensor Middle
-int SensorMiddle() {
+boolean SensorMiddle() {
   if(digitalRead(SensorMiddlePin) == LOW) return 1;
   else  return 0; 
 }
 // Sensor Right
-int SensorRight() {
+boolean SensorRight() {
   if(digitalRead(SensorRightPin) == LOW) return 1;
   else  return 0; 
 }
