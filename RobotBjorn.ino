@@ -1,4 +1,4 @@
-// Sensors
+// Toogle Sensors
 const char SensorLeftPin    = A5;
 const char SensorMiddlePin  = A5;
 const char SensorRightPin  = A5;
@@ -7,14 +7,6 @@ const char SensorRightPin  = A5;
 int EngineSpeed = 128;
 // Recommended: 192 for 5x AA, 96 for 1x 9V 64 over USB
 // Min: 0  Max: 255
-// Channel A = right engine
-// Channel B = left engine
-const char MotorChannelApin = 12;
-const char MotorBrakeApin = 9;
-const char MotorChannelAPWMpin = 3;
-const char MotorChannelBpin = 13;
-const char MotorBrakeBpin = 8;
-const char MotorChannelBPWMpin = 11;
 
 // Horn
 const char HornPin = 2; 
@@ -25,6 +17,18 @@ const boolean Debug = false;
 // Motherboard
 const boolean Due = false; // is this an arduino due?
 const boolean Mega = false; // is this an arduino mega?
+
+// Hardware revision
+const boolean IsMotorShield = true; // v1.0 hardware or compatible hardware
+const boolean IsCherokey  = false; // v2.0 hardware
+// Channel A = right engine
+const char MotorChannelApin = 12;
+const char MotorBrakeApin = 9;
+const char MotorChannelAPWMpin = 3;
+// Channel B = left engine
+const char MotorChannelBpin = 13;
+const char MotorBrakeBpin = 8;
+const char MotorChannelBPWMpin = 11;
 
 // Startup Procedure
 void setup() {
@@ -388,5 +392,8 @@ void RightLight(boolean OnOff) {
 // White lights when in reverse
 void ReverseLight(boolean OnOff){
 }
+
+
+
 
 
