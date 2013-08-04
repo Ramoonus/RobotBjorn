@@ -13,7 +13,7 @@ const char MotorChannelApin = 12;
 const char MotorBrakeApin = 9;
 const char MotorChannelAPWMpin = 3;
 const char MotorChannelBpin = 13;
-const char BrakeBpin = 8;
+const char MotorBrakeBpin = 8;
 const char MotorChannelBPWMpin = 11;
 
 // Horn
@@ -37,7 +37,7 @@ void setup() {
 
   //Setup Channel B
   pinMode(MotorChannelBpin, OUTPUT); //Initiates Motor Channel B pin
-  pinMode(BrakeBpin, OUTPUT);  //Initiates Brake Channel B pin
+  pinMode(MotorBrakeBpin, OUTPUT);  //Initiates Brake Channel B pin
 
   // Sensor
   pinMode(SensorLeftPin, INPUT);
@@ -216,7 +216,7 @@ void Gearbox( int gear) {
 
 // Brake functions
 void BrakeLeft() {
-  digitalWrite(BrakeBpin, HIGH);  //Engage the Brake for Channel B
+  digitalWrite(MotorBrakeBpin, HIGH);  //Engage the Brake for Channel B
 }
 void BrakeRight() {
   digitalWrite(MotorBrakeApin, HIGH);  //Engage the Brake for Channel A
@@ -233,7 +233,7 @@ void Brake() {
 void ReverseLeft() {
   //Motor B backward @ full speed
   digitalWrite(MotorChannelBpin, LOW);  //Establishes backward direction of Channel B
-  digitalWrite(BrakeBpin, LOW);   //Disengage the Brake for Channel B
+  digitalWrite(MotorBrakeBpin, LOW);   //Disengage the Brake for Channel B
   analogWrite(MotorChannelBPWMpin, EngineSpeed);    //Spins the motor on Channel B 
 }
 void ReverseRight() {
@@ -256,7 +256,7 @@ void DriveReverse() {
 void DriveLeft() {
   //Motor B forward @ full speed
   digitalWrite(MotorChannelBpin, HIGH); //Establishes forward direction of Channel B
-  digitalWrite(BrakeBpin, LOW);   //Disengage the Brake for Channel B
+  digitalWrite(MotorBrakeBpin, LOW);   //Disengage the Brake for Channel B
   analogWrite(MotorChannelBPWMpin, EngineSpeed);   //Spins the motor on Channel B 
 }
 void DriveRight(){
