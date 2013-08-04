@@ -287,17 +287,23 @@ void TurnRight() {
 // Sensor Left
 boolean SensorLeft() {
   if(digitalRead(SensorLeftPin) == LOW) return 1;
-  else  return 0; 
+  else { 
+    return 0;  
+  }
 }
 // Sensor Middle
 boolean SensorMiddle() {
   if(digitalRead(SensorMiddlePin) == LOW) return 1;
-  else  return 0; 
+  else { 
+    return 0; 
+  }
 }
 // Sensor Right
 boolean SensorRight() {
   if(digitalRead(SensorRightPin) == LOW) return 1;
-  else  return 0; 
+  else { 
+    return 0; 
+  }
 }
 // Current Sensing Channel A
 int CurrentSenseA() {
@@ -383,6 +389,7 @@ void ReverseLight(){
 }
 void ReverseLightOff(){
 }
+
 
 
 
