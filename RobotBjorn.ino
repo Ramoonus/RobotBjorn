@@ -45,8 +45,8 @@ void setup() {
   pinMode(SensorRightPin, INPUT);
 
   // Turn on Headlights
-  HeadLights();
-  TailLights();
+  HeadLights(1);
+  TailLights(1);
   Serial.println('Lights are on');
 
   // Brake on start
@@ -70,7 +70,7 @@ void loop(){
   KeyboardControl();
 
   // AutoPilot
-  //AutoPilot(); delay(500);
+  //AutoPilot();
 }
 // Test Function
 void Test() { 
@@ -116,6 +116,7 @@ void AutoPilot() {
   else {
     DriveForward(); 
   }
+  // End If
 }
 
 void KeyboardControl(){ 
@@ -222,11 +223,13 @@ void BrakeRight() {
   digitalWrite(MotorBrakeApin, HIGH);  //Engage the Brake for Channel A
 }
 void Brake() {
+  // Brake light
+  BrakeLight(1);
   // Brake
   BrakeLeft(); 
   BrakeRight(); 
-  // Brake lights
-  BrakeLight();
+  // Brake light Off
+  BrakeLight(0);
 }
 
 // Drive in reverse function
@@ -244,12 +247,12 @@ void ReverseRight() {
 }
 void DriveReverse() {
   // Lights on
-  ReverseLight();
+  ReverseLight(1);
   // Reverse
   ReverseLeft();
   ReverseRight();
   // Lights off
-  ReverseLightOff();
+  ReverseLight(0);
 }
 
 // Drive specific way function
@@ -271,17 +274,17 @@ void DriveForward() {
 }
 // Turn Left
 void TurnLeft() {
-  LeftLight(); 
+  LeftLight(1); 
   ReverseLeft();
   DriveRight();
-  LeftLightOff();
+  LeftLight(0);
 }
 // Turn Right
 void TurnRight() {
-  RightLight(); 
+  RightLight(1); 
   ReverseRight();
   DriveLeft();
-  RightLightOff();
+  RightLight(0);
 }
 
 // Sensor Left
@@ -358,39 +361,27 @@ void Horn() {
   // Frequency 262 = C4
 }
 // Head Lights 
-void HeadLights() {
+void HeadLights(boolean OnOff) {
   // Enable Headlight left
   // Enable Headlight right
 }
 // Tail Lights
-void TailLights() {
+void TailLights(boolean OnOff) {
   // Enable Taillight Left
   // Enable Taillight Right
 }
 // Brake Light
-void BrakeLight(){
+void BrakeLight(boolean OnOff){
   // Enable Breaklight left
   // Enable Breaklight right
 }
 // Turn Left Light
-void LeftLight() {
-}
-// Turn Left Light Off
-void LeftLightOff() {
+void LeftLight(boolean OnOff) {
 }
 // Turn Right Light
-void RightLight() {
-}
-// Turn Right Light
-void RightLightOff() {
+void RightLight(boolean OnOff) {
 }
 // White lights when in reverse
-void ReverseLight(){
+void ReverseLight(boolean OnOff){
 }
-void ReverseLightOff(){
-}
-
-
-
-
 
