@@ -1,15 +1,17 @@
 // Toogle Sensors
-const char SensorLeftPin    = A5;
+const char SensorLeftPin    = A3;
 const char SensorMiddlePin  = A5;
-const char SensorRightPin  = A5;
+const char SensorRightPin  = A4;
+// free
+// used: A0, A1 for Motorshield
 
 // Motor
-int EngineSpeed = 128;
+int EngineSpeed = 255;
 // Recommended: 192 for 5x AA, 96 for 1x 9V 64 over USB
 // Min: 0  Max: 255
 
 // Horn
-const char HornPin = 2; 
+const char HornPin = 5; 
 
 // Debug
 const boolean Debug = false;
@@ -29,6 +31,9 @@ const char MotorChannelAPWMpin = 3;
 const char MotorChannelBpin = 13;
 const char MotorBrakeBpin = 8;
 const char MotorChannelBPWMpin = 11;
+
+// Time in ms to  turn left or right
+const int turntime = 2000; // 1000 = 1/8
 
 // Startup Procedure
 void setup() {
@@ -72,13 +77,13 @@ void setup() {
 void loop(){
 
   //Test
-  //test();
+  //Test();
 
   // Respond to Keyboard
-  KeyboardControl();
+  //KeyboardControl();
 
   // AutoPilot
-  //AutoPilot();
+  AutoPilot();
 }
 // Test Function
 void Test() { 
@@ -99,27 +104,42 @@ void Test() {
 
 void AutoPilot() {
 
-  if(SensorMiddle() ) {   // On something insight
+  if(SensorMiddle() ) {  
+    // On something insight
     Brake();              // Brake
     Serial.println("Stopped because I detected something");
-    if (!SensorLeft) { // Look Left
+          if(Debug) {
+        Serial.println("SensorMiddle return");
+        Serial.println(SensorMiddle() );
+      }
+    
+    if (!SensorLeft() ) { // Look Left
       Serial.println("Going left");
-      TurnLeft; 
-      delay(500);
+      TurnLeft(); 
+      delay(turntime );
       Brake;
     }              
 
-    else if (!SensorRight) { // Or look right 
+    else if (!SensorRight() ) { // Or look right 
       Serial.println("Going right");
-      TurnRight; 
-      delay(500);
+      TurnRight(); 
+      delay(turntime );
       Brake; 
     }          
 
     else { // Or do nothing
+      Serial.println("Cannot decide which way to go");
+
+      if(Debug) {
+        Serial.println("SensorLeft return");
+        Serial.println(SensorLeft() );
+        Serial.println("SensorRight return");
+        Serial.println(SensorRight() );
+      }
+      
       Horn(); 
-      delay(1000);
-    }              
+      delay(2000);
+    }          
   }
   else {
     DriveForward(); 
@@ -335,7 +355,7 @@ int CurrentSenseB() {
     return map( analogRead(A1) , 0, 1023, 0, 2000); 
   }
   else {    
-    return map( analogRead(A0) , 0, 676, 0, 2000);
+    return map( analogRead(A1) , 0, 676, 0, 2000);
   }
 }
 // Sensor Left Debug
@@ -365,7 +385,7 @@ void SensorRightDebug() {
 // Horn / Beeper 
 void Horn() {
   //tone(pin, frequency, duration)  
-  tone(HornPin, 262, 1500);
+  tone(HornPin, 262, 1000);
   // Frequency 262 = C4
 }
 // Head Lights 
