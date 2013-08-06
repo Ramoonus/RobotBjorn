@@ -105,7 +105,7 @@ void Test() {
 void AutoPilot() {
 
   if(SensorMiddle()   ) {  
-    // On something insight
+    // On something insight (Middle)
     Brake();              // Brake
     Serial.println("Stopped because I detected something");
 
@@ -159,14 +159,22 @@ void AutoPilot() {
   }
   else if (SensorLeft() ) {
     // you see something on the left
-    
+    Serial.println("Might hit something: left");
+    Brake();
+    TurnRight(); 
+    delay(turntime); 
+    Brake();
   }
-    else if (SensorRight() ) {
-    // you see something on the left
-    
+  else if (SensorRight() ) {
+    // you see something on the right
+    Serial.println("Might hit something: right");
+    Brake();
+    TurnLeft(); 
+    delay(turntime); 
+    Brake();
   }
-  
-  
+
+
   // If everything is going fine
   else {
     DriveForward(); 
@@ -439,6 +447,7 @@ void RightLight(boolean OnOff) {
 // White lights when in reverse
 void ReverseLight(boolean OnOff){
 }
+
 
 
 
