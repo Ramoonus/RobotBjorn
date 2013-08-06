@@ -1,12 +1,12 @@
 // Toogle Sensors
 const char SensorLeftPin    = A3;
-const char SensorMiddlePin  = A5;
-const char SensorRightPin  = A4;
+const char SensorMiddlePin  = A4;
+const char SensorRightPin  = A5;
 // free
 // used: A0, A1 for Motorshield
 
 // Motor
-int EngineSpeed = 255;
+int EngineSpeed = 192;
 // Recommended: 192 for 5x AA, 96 for 1x 9V 64 over USB
 // Min: 0  Max: 255
 
@@ -104,17 +104,22 @@ void Test() {
 
 void AutoPilot() {
 
-  if(SensorMiddle() ) {  
+  if(SensorMiddle()   ) {  
     // On something insight
     Brake();              // Brake
     Serial.println("Stopped because I detected something");
-          if(Debug) {
-        Serial.println("SensorMiddle return");
-        Serial.println(SensorMiddle() );
-      }
-    
+
+    if(Debug) {
+      Serial.println("SensorMiddle return");
+      Serial.println(SensorMiddle() );
+      Serial.println("SensorLeft return");
+      Serial.println(SensorLeft() );
+      Serial.println("SensorRight return");
+      Serial.println(SensorRight() );
+    }
+
     if (!SensorLeft() ) { // Look Left
-      Serial.println("Going left");
+      Serial.println("Going left");    
       TurnLeft(); 
       delay(turntime );
       Brake;
@@ -127,6 +132,17 @@ void AutoPilot() {
       Brake; 
     }          
 
+    else if (SensorMiddle() && SensorLeft() && SensorRight() ) {
+      // stuck
+      Serial.println("Stuck. Reversing and turnaround");
+      TurnLeft(); 
+      delay(turntime * 2);
+
+      // Reverse
+      DriveReverse(); 
+      delay(2000);
+      Brake();
+    }
     else { // Or do nothing
       Serial.println("Cannot decide which way to go");
 
@@ -136,11 +152,22 @@ void AutoPilot() {
         Serial.println("SensorRight return");
         Serial.println(SensorRight() );
       }
-      
+
       Horn(); 
       delay(2000);
     }          
   }
+  else if (SensorLeft() ) {
+    // you see something on the left
+    
+  }
+    else if (SensorRight() ) {
+    // you see something on the left
+    
+  }
+  
+  
+  // If everything is going fine
   else {
     DriveForward(); 
   }
@@ -412,6 +439,8 @@ void RightLight(boolean OnOff) {
 // White lights when in reverse
 void ReverseLight(boolean OnOff){
 }
+
+
 
 
 
