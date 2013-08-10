@@ -1,3 +1,6 @@
+// Include SoftwareSerial to enable extra serial ports for Xbee etc
+#include <SoftwareSerial.h>
+
 // Toogle Sensors
 const char SensorLeftPin    = A3;
 const char SensorMiddlePin  = A4;
