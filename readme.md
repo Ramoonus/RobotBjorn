@@ -38,6 +38,7 @@ I used the following software for the development:
 * [Readme.md](Readme.md) improvements.
 * Added support for Atmel Studio 6.1 + Visual Micro
 * Fix GitHub version taggging for releases 1.2-1.4  
+* Updated Compatibility list
 
 ### 1.4 - 25-7-2013 ###
 * Updated readme.md
