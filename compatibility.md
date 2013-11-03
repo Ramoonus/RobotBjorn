@@ -2,20 +2,19 @@
 This document describes all official and third-party Arduino Boards en Shields which could be used with RobotBjorn. 
 
 ## Arduino ##
-### Confirmed working ###
+### Working ###
 
 * Arduino Uno R3 (primairy goal)
 * Arduino Leonardo R3
 * Arduino Ethernet
 * [Sparkfun RedBoard](https://www.sparkfun.com/products/11575)
-* Arduino Yún
+* [Arduino Yún](http://arduino.cc/en/Main/ArduinoBoardYun)
 * Arduino Mega 2560
-* Arduino Tre
 
 ### Untested ###
 Untested but possibly working:
 
-* Arduino Due
+* Arduino Due (3.3V instead of 5V) - in progress
 * Arduino Leonardo
 * Arduino Mega ADK
 * Arduino Micro
@@ -23,9 +22,11 @@ Untested but possibly working:
 * Arduino Pro Mini
 * Arduino Pro
 * Arduino Fio
-* [Intel Galileo](http://arduino.cc/en/ArduinoCertified/IntelGalileo)
+* [Intel Galileo](http://arduino.cc/en/ArduinoCertified/IntelGalileo) ([intel.com](http://www.intel.com/content/www/us/en/do-it-yourself/galileo-maker-quark-board.html "Intel Galileo"))
+* [Arduino Tre](http://arduino.cc/en/Main/ArduinoBoardTre)
 
 ### Incompatible ###
+Most likely due physical appearance
 
 * Arduino Esplora
 * Arduino LilyPad 
