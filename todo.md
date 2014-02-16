@@ -13,7 +13,7 @@ A list of things to do in future versions
 - [ ] Arduino Due Compatible
 - [ ] Arduino TRE Compatible
 - [ ] Arduino Yun Compatible
-- [ ] Intel Galileo Compatible
+- [x] Intel Galileo Compatible
 
 
 ## Mods ##
