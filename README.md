@@ -24,7 +24,7 @@ I used the following software for the development:
 * Client: [Processing](http://processing.org/download/ "Download Processing") 2.0
 
 ### Compatible ###
-* [Atmel Studio 6.1 ](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")
+* [Atmel Studio 6.1 update 2.0](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")
 * [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
 
 ### Incompatible ###
