@@ -2,6 +2,8 @@
 
 ## Photo ##
 ![Photo](photo.jpg)
+![Photo](photo2.jpg)
+![Photo](photo3.jpg)
 
 ## Wiring ##
 ![Wiring](wiring.gif)
