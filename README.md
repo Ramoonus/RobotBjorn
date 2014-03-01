@@ -45,7 +45,7 @@ I used the following software for the development:
 * Removed software version numbers. Preferred version: latest stable
 * Updated schematics to use official Arduino shields
 * Documents now use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
-* Todo list now in GitHub Flavered Markdown
+* Todo list now in GitHub Flavored Markdown
 * Added keyboard controls using serial input. WSAD to move. X to stop. Z to check activity.
  
 ### 1.3 - 10-2-2013 ###
