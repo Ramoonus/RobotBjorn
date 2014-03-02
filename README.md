@@ -23,12 +23,10 @@ I used the following software for the development:
 * Schematics: [Fritzing](http://fritzing.org/ "Download Fritzing") 
 * Client: [Processing](http://processing.org/download/ "Download Processing") 2.0
 
-### Compatible ###
-* [Atmel Studio 6.1 update 2.0](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")
-* [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
-
-### Incompatible ###
+Should be fully compatible with
+* [Atmel Studio 6.1 update 2.0](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")  +  [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
 * [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
+
 
 ## Release Notes ##
 ### Dev: 1.5 / 2.0 ###
