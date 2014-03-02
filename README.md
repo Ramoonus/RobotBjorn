@@ -59,7 +59,7 @@ I used the following software for the development:
 * Reverse Lights
 * Brake Lights
 
-### 1.2 12-1-2013 ###
+### 1.2 - 12-1-2013 ###
 * Engine Current Reading in mA for both channels A and B (hardware mod)
 
 ### 1.1 - 30-12-2012 ###
