@@ -18,7 +18,7 @@ Please sponsor me and this project by donating via PayPal using the link:
 ## Software Toolkit ##
 I used the following software for the development:
 
-* Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
+* Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.5.x
 * Documents: [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
 * Schematics: [Fritzing](http://fritzing.org/ "Download Fritzing") 
 * Client: [Processing](http://processing.org/download/ "Download Processing") 2.0
@@ -28,7 +28,7 @@ I used the following software for the development:
 * [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
 
 ### Incompatible ###
-* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.5.x
+* [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
 
 ## Release Notes ##
 ### Dev: 1.5 / 2.0 ###
