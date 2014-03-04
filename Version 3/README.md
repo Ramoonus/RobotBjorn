@@ -22,7 +22,7 @@ Images copyrighted by [Sparkfun](https://www.sparkfun.com/)
 10. 
 11. 
 12. 
-13. 
+13. User LED
 
 A0. 
 A1. 
