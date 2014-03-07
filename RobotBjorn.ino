@@ -424,9 +424,11 @@ void SensorRightDebug() {
 }
 // Horn / Beeper
 void Horn() {
+  const int HornTime = 1000;
+  const int NoteFreq = 262;   // Frequency 262 = C4
+  
   //tone(pin, frequency, duration)
-  tone(HornPin, 262, 1000);
-  // Frequency 262 = C4
+  tone(HornPin, NoteFreq, HornTime);
 }
 // Head Lights
 void HeadLights(boolean OnOff) {
