@@ -44,9 +44,10 @@ void setup() {
   // Open Serial Pin
   Serial.begin(9600);
   /*if(Mega)
-   { Serial1.begin(9600)
-   Serial2.begin(9600)
-   Serial3.begin(9600) } */  // Not Uno compatible
+   { Serial1.begin(9600);
+   Serial2.begin(9600);
+   Serial3.begin(9600); }   // Not Uno compatible
+   */
 
   //Setup Channel A
   pinMode(MotorChannelApin, OUTPUT); //Initiates Motor Channel A pin
