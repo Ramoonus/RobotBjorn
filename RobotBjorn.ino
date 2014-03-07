@@ -9,9 +9,10 @@ const char SensorRightPin  = A5;
 // used: A0, A1 for Motorshield
 
 // Motor
-int EngineSpeed = 192;
+const int EngineSpeed = 192;
 // Recommended: 192 for 5x AA, 96 for 1x 9V 64 over USB
 // Min: 0  Max: 255
+// Deactivated for Gearbox
 
 // Horn
 const char HornPin = 5;
