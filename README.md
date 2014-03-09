@@ -26,6 +26,7 @@ I used the following software for the development:
 Should be fully compatible with
 * [Atmel Studio 6.1 update 2.0](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")  +  [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
 * [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
+* Eclipse IDE for C/C++ Developers + AVR
 
 
 ## Release Notes ##
@@ -35,6 +36,7 @@ Should be fully compatible with
 * Added function KeyboardControl to replace the functionality added in version 1.4
 * [Readme.md](Readme.md) improvements.
 * Added support for Atmel Studio 6.1 + Visual Micro
+* Added support for Eclipse IDE
 * Fix GitHub version taggging for releases 1.2-1.4  
 * Updated Compatibility list
 
