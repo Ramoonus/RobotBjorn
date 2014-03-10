@@ -34,7 +34,7 @@ Should be fully compatible with
 * Added function: Gearbox(int gear) to modify PWM on a scale 1-10
 * Added function: AutoPilot (under construction)
 * Added function KeyboardControl to replace the functionality added in version 1.4
-* [Readme.md](Readme.md) improvements.
+* [Readme.md](README.md) improvements.
 * Added support for Atmel Studio 6.1 + Visual Micro
 * Added support for Eclipse IDE
 * Fix GitHub version taggging for releases 1.2-1.4  
