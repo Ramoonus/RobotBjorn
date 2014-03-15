@@ -6,8 +6,6 @@ It uses basic Arduino Shields and open source firmware (writting in C++, [Wiring
 
 Compatibility with third-party shields and platforms is described in the [Compatibility](compatibility.md) document.
 
-Future development is specified in a [Todo](todo.md)
-
 RobotBjorn is named Bjorn, after [Asbjørn A Mikkelsen](https://twitter.com/neslekkim)
 
 ## Donate ##
