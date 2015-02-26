@@ -216,7 +216,7 @@ void KeyboardControl() {
           Brake();
           break;
 
-          // Gearbox
+        // Gearbox
         case '0'://Gear 0
           Gearbox(0);
           break;
@@ -426,7 +426,7 @@ void SensorRightDebug() {
 void Horn() {
   const int HornTime = 1000;
   const int NoteFreq = 262;   // Frequency 262 = C4
-  
+
   //tone(pin, frequency, duration)
   tone(HornPin, NoteFreq, HornTime);
 }
