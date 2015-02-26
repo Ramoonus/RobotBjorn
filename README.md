@@ -16,7 +16,7 @@ Please sponsor me and this project by donating via PayPal using the link:
 ## Software Toolkit ##
 I used the following software for the development:
 
-* Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.5.x
+* Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.6.0
 * Documents: [MarkdownPad](http://markdownpad.com/ "Download MarkdownPad") (for Windows)
 * Schematics: [Fritzing](http://fritzing.org/ "Download Fritzing") 
 * Client: [Processing](http://processing.org/download/ "Download Processing") 2.0
@@ -25,6 +25,7 @@ Should be fully compatible with
 * [Atmel Studio 6.1 update 2.0](http://www.atmel.com/microsite/atmel_studio6/ "Atmel Studio 6")  +  [Visual Micro](http://www.visualmicro.com/ "Visual Micro")
 * [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.0.x
 * Eclipse IDE for C/C++ Developers + AVR
+* * Robot Firmware: [Arduino IDE](http://arduino.cc/en/Main/Software "Download Arduino IDE") 1.5.x
 
 
 ## Release Notes ##
